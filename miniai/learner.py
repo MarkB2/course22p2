@@ -209,7 +209,7 @@ class ProgressCB(Callback):
             self.losses.append(self.learn.metrics.loss_m.last.item())
             self.mbar.update_graph([[list(range(len(self.losses))), self.losses]])
 
-# %% ../nbs/07_learner.ipynb 31
+# %% ../nbs/07_learner.ipynb 30
 class MomentumLearner(Learner):
     def predict(self): self.preds = self.model(self.batch[0])
     def get_loss(self): self.loss = self.loss_func(self.preds, self.batch[1])
